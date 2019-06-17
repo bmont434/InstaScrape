@@ -22,8 +22,16 @@ namespace InstaScrape
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            if (txtPassword.Text == "" || txtUsername.Text == "")
+            {
+                MessageBox.Show("Please enter username and password");
+            }
+            else
+            {
+                ScrapeInsta();
+            }
             
-            ScrapeInsta();
         }
 
         public void ScrapeInsta()
